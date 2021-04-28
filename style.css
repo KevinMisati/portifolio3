@@ -124,12 +124,31 @@ h3{font-size: var(--fs-h3);}
 /* =======================end of global variables================ */
 
 /* ========================header section========================== */
+.header-banner{
+    height: 100vh;
+    width: 100vw;
+     background-color:#d24d57 ;
+    background-image:linear-gradient(var(--clr-accent),var(--clr-accent)) ,url("https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-blend-mode:saturation ;
+    background-blend-mode: color-burn;
+    background-blend-mode: color-dodge;
+    background-blend-mode: darken;
+    background-blend-mode: difference;
+    background-blend-mode: soft-light;
+    background-blend-mode: screen;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
 .header{
     width: 100vw;
     height: 70px;
     display: flex;
     align-items: center;
-    background: rgba(248, 250, 249, 0.747);
+    /* background: rgba(248, 250, 249, 0.747); */
 }
 
 header{
@@ -322,52 +341,38 @@ button.nav_toggle{
 /*====end of header====*/
 
 
-/*========================intro section, hi i am kevin misati============== */
+/*========================intro section============== */
 .intro-container{
     height: calc(100vh - 80px);
     width: 100vw;
     display: flex;
     align-items: center;
-    background: rgba(248, 250, 249, 0.747);
+    justify-content: center;
+
 }
-
-.section_title_intro strong{
-    display: block;
-}
-
-
 .intro{
     position: relative;
     width:90% ;
     margin:.5em  ;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-.intro_img{
-    box-shadow: var(--bs);
+.intro h1{
+    font-size: 2.4rem;
+    color: var(--clr-light);
 }
-
-:focus{
-    outline:3px solid var(--clr-accent);
-    outline-offset:5px;
-
+.intro h3.front-end-title{
+    font-size: 1.8rem;
+    color: var(--clr-light);
 }
-
-
-/*buttons*/
-
-
-
-.services{
-    margin-bottom: 4em;
+.intro .btn:hover {
+    background:transparent;
 }
-
-h3.front-end-title{
-    margin: 1em 0;
-    color: #56e7d4;
-}
-
 @media(min-width:1030px){
     .intro{
-        display: grid;
+       /*  display: grid; */
         text-align: center;
         width:90%;
         margin-left: auto;
@@ -409,6 +414,30 @@ h3.front-end-title{
  .services{
      margin-bottom: .25em;
  }
+}
+/* .intro_img{
+    box-shadow: var(--bs);
+} */
+
+/* :focus{
+    outline:3px solid var(--clr-accent);
+    outline-offset:5px;
+
+} */
+/*========================end of intro section============== */
+
+
+/*buttons*/
+
+
+
+.services{
+    margin-bottom: 4em;
+}
+
+h3.front-end-title{
+    margin: 1em 0;
+    color: #56e7d4;
 }
 
 section.my_services{
@@ -462,7 +491,6 @@ section.my_services{
     
     text-decoration: none;
     background: var(--clr-accent);
-   /*  background: var(--clr-crimson); */
     border-radius: 5px;
     font-size: 1.5rem;
     text-transform: capitalize;
@@ -470,11 +498,14 @@ section.my_services{
     font-weight: var(--fw-bold);
     transition: transfrom 200ms ease-in-out;
     border: .1px solid var(--clr-accent);
+    outline: none;
+    cursor: pointer;
 }
 .btn:hover{
     
     color: var(--clr-light);
     background: var(--clr-dark);
+    outline: none;
     
 
 }
@@ -648,6 +679,60 @@ section.about_me{
 }
 
 /*==========footer===========*/
+
+/* ================sklls section ============== */
+.skills{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skills-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    align-items: center;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    text-align: center;
+}
+.skills-container p {
+    background-color: var(--clr-accent);
+    border: 1px solid var(--main-color);
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 600;
+    padding: .5em;
+    transition: background-color .5s, color .5s;
+}
+.skills .row1{
+    grid-area: 1 / 1 / 2 / 3;
+}
+.skills .row2{
+    grid-area: 1 / 3 / 2 / 5;
+}
+.skills .row3{
+    grid-area: 1 / 5 / 2 / 7;
+}
+.skills .row4{
+    grid-area: 2 / 1/ 3 / 3;
+}
+.skills .row5{
+    grid-area: 2 / 3/ 3 / 5;
+}
+.skills .row6{
+    grid-area: 2/ 5 / 3/ 7;
+}
+.skills .row7{
+    grid-area: 3/ 1 / 4 / 4;
+}
+.skills .row8{
+    grid-area: 3 / 4/ 4 / 7;
+}
+/* ================end sklls section ============== */
 
 footer{
 
