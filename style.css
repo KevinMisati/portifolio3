@@ -602,48 +602,23 @@ section.about_me{
     }
     .project-image-div{
         
-        height:40vh ;
+        height:300px;
+        width: 400px;
         overflow: hidden;
         position: relative;
         border-radius:5%;
         box-shadow: var(--bs); 
         position: relative;
     }
-    /* .project-1{
-        min-width: 74vw;
-        transform: scale(1.02);
-    }  */
 
 .project img{
     min-width: 100%;
     min-height:100%;
-    margin: 0 0 1em 0;
-    display: inline-block;
     transition: var(--transition);
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    object-fit: cover; 
 }
 
 .project img:hover{
         transform: scale(1.1);
-}
-
-.project_title{
-    margin:1rem 0 0 .5rem;
-}
-
-.project_title a{
-    text-decoration: none;
-    color:var(--clr-accent);
-    display: inline-block;
-    
-}
-
-.project_title a:hover{
-    outline: none;
 }
 
 @media (min-width:800px){
@@ -652,27 +627,20 @@ section.about_me{
     }
     .projects{
         flex-direction: row;
-        flex-wrap: no-wrap; 
+        flex-wrap: wrap; 
+        justify-content: center;
     }
 
     .project-image-div{
-        min-width: 25vw;
-        height:40vh ;
+        min-width: 350px;
+        height:300px;
         overflow: hidden;
         border-radius:5%;
         box-shadow: var(--bs);
     }
-    
-    .project_list{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-    }
     .project{
-        display: block;
-        width:30vw ;
-        margin: 4rem; 
+       width:auto;
+       margin: 1rem;
     }
     .button{
         display: none;
