@@ -358,10 +358,16 @@ button.nav_toggle{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
 }
+/* .intro img {
+    width: 1rem;
+    height: 1rem;
+} */
 .intro h1{
     font-size: 2.4rem;
     color: var(--clr-light);
+    text-align: center;
 }
 .intro h3.front-end-title{
     font-size: 1.8rem;
@@ -520,10 +526,15 @@ section.my_services{
 } */
 @media (min-width:800px){
     .services{
-        display:block ;
         margin:auto ;
         display: flex;
         max-width: 1000px;
+}
+.services img {
+    max-width: 500px;
+}
+.services p {
+    margin-left: 1rem;
 }
     .service{
         max-width: 500px;
@@ -531,6 +542,7 @@ section.my_services{
     }
     .btn{
         padding: .35rem .5rem;
+        margin-top: 1rem;
     }
     
 }
@@ -706,7 +718,13 @@ section.about_me{
     color: #fff;
     font-weight: 600;
     padding: .5em;
-    transition: background-color .5s, color .5s;
+    transition: all .5s, color .5s;
+    cursor: pointer;
+    border: 1px solid var(--clr-accent);
+}
+.skills-container p:hover{
+     background-color: transparent;
+     color: var(--clr-dark);
 }
 .skills .row1{
     grid-area: 1 / 1 / 2 / 3;
@@ -731,6 +749,12 @@ section.about_me{
 }
 .skills .row8{
     grid-area: 3 / 4/ 4 / 7;
+}
+.skills .row9{
+    grid-area: 4 / 1/ 5 / 4;
+}
+.skills .row10{
+    grid-area: 4 / 4/ 5 / 7;
 }
 /* ================end sklls section ============== */
 
