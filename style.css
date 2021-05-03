@@ -360,10 +360,34 @@ button.nav_toggle{
     flex-direction: column;
     text-align: center;
 }
-/* .intro img {
-    width: 1rem;
-    height: 1rem;
-} */
+ .intro img {
+     position: relative;
+    animation: hand 1.8s infinite ;
+     transform-origin: 70% 70%;
+} 
+@keyframes hand {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(12deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(9deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .intro h1{
     font-size: 2.4rem;
     color: var(--clr-light);
