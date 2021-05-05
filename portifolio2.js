@@ -5,7 +5,6 @@ const navLinks = document.querySelector(".nav_link");
 
 const link1 = document.querySelector(".link1");
 const link2 = document.querySelector(".link2");
-const link3= document.querySelector(".link3");
 const link4 = document.querySelector(".link4");
 
 navToggle.addEventListener("click", function () {
@@ -19,9 +18,7 @@ navToggle.addEventListener("click", function () {
   link2.addEventListener("click", () => {
     document.body.classList.remove("nav_open");
   });
-  link3.addEventListener("click", () => {
-    document.body.classList.remove("nav_open");
-  });
+  
   link4.addEventListener("click", () => {
     document.body.classList.remove("nav_open");
   });
