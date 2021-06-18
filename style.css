@@ -148,7 +148,7 @@ h3{font-size: var(--fs-h3);}
     display: flex;
     align-items: center; 
     padding: auto 3rem;
-    
+   
 }
 
 .logo-container{
@@ -183,6 +183,7 @@ nav{
     margin: 0;
     padding: 0;
     transition: clip-path 1s ease-in-out  ;
+     border-bottom: 1px solid var(--clr-accent);
 }
 
 .nav_list{
@@ -302,6 +303,7 @@ button.nav_toggle{
     align-items: center;
     justify-content: center;
       width: 98.3vw; 
+      border-bottom: 1px solid var(--clr-accent);
         
         
         
