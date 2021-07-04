@@ -159,6 +159,7 @@ h3{font-size: var(--fs-h3);}
 .logo{
     position: absolute;
     z-index: 200;
+    cursor: pointer;
 }
 .logo h3{
     font-size: 2rem;
@@ -656,9 +657,6 @@ section.about_me{
         position: relative;
         flex-wrap: wrap;
     }
-    
-
-    
     .project{
         
         width: 100%;
@@ -667,7 +665,7 @@ section.about_me{
     .project-image-div{
         
         height:300px;
-        width: 400px;
+        width: 300px;
         overflow: hidden;
         position: relative;
         border-radius:5%;
@@ -696,7 +694,7 @@ section.about_me{
     }
 
     .project-image-div{
-        min-width: 350px;
+        width: 300px;
         height:300px;
         overflow: hidden;
         border-radius:5%;
