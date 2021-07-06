@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My portipfolio</title>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="all.css">
 <script src="https://use.fontawesome.com/754477a40a.js"></script>
 </head>
 <body>
@@ -28,7 +27,6 @@
     <ul class="nav_list">
     <li class="nav_item"><a href="#home" class=" link1 nav_link">Home</a></li>
     <li class="nav_item"><a href="#services" class=" link2 nav_link">My Services</a></li>
-    <li class="nav_item"><a href="#about" class=" link3 nav_link">About Me</a></li>
     <li class="nav_item"><a href="#work" class="link4 nav_link">My Work</a></li>
 
     </ul>
@@ -40,10 +38,11 @@
 <div class="intro-container">
 <section id="home" class="intro" >
 <h1 id="home" class="section_title section_title_intro">
-    Hello, I am <strong>Kevin Misati</strong>
+    <span><img alt="👋" src="https://twemoji.maxcdn.com/2/72x72/1f44b.png" /></span>
+    Hello , I am <strong>Kevin Misati</strong>
 </h1>
 <h3 class="front-end-title">Am a Front-end Web Developer</h3>
-<button class="btn">Vew my work </button>
+<a href="#work" class="btn">Vew my work </a>
 <!--  <p class="section_subtitle section_subtitle_intro">
     Front-end developer
 </p> -->
@@ -58,8 +57,18 @@
 <h2 class="section_title section_title_services">What I do</h2>
 <div class="underline"></div>
 <div class="services">
+    <img src="./images/developerActivity.svg" />
+
+    <di class="services_text">
+        <p>I love and enjoy building cool stuff for the web. I enjoy spending my free time increasing my knowledge on Web Development and building new and
+        challenging projects.
+</p>
+        <!-- <p>Am a front-end enthusiast constantly learning on how to better myself on web development. I enjoy learning new
+        technologies in each and everyday.I have the basics of react, php, mysql and jquery but I chose to specialise in
+        front-end development using HTML, CSS, JavaScript and Bootstrap</p> -->
+    </div>
     
-    <div class="service">
+    <!-- <div class="service">
         <div class="icon">
             <i class="fa fa-code"></i>
         </div>
@@ -77,31 +86,39 @@
         <h3>Responsive Design</h3>
     <p>I can build responsive websites which looks great in all devices with small or large screens.</p>
 
-    </div>
+    </div> -->
 
 </div>
 <a href="#work" class="btn">My work</a>
 </section>
 
 
-<!--=================Who I Am===========-->
-<section class="about_me" id="about">
-    <div class="section_title_about">
-<h2 class="section_title ">
-    Who I am
-</h2>
-<div class="underline"></div>
-</div>
 
-<!--<p class="section_subtitle section_subtitle_about">Am a developer</p>-->
-<div class="about_me_body">
-    
-    </div>  
-    <img src="images\second.png" class="about_me_image" alt="">
-<p class="about_me_info">Am a front-end enthusiast constantly learning on how to better myself on web development. I enjoy learning new technologies in each and everyday.I have the basics of react, php, mysql and jquery but I chose to specialise in front-end development using HTML, CSS, JavaScript and Bootstrap   </p>
-
+<!-- ==================skills section============ -->
+<section class="skills">
+    <div class="skills-block">
+        <div class="section_title_about">
+            <h2 class="section_title ">
+               My Skills
+            </h2>
+            <div class="underline"></div>
+        </div>
+        <div class="skills-container">
+            <p class="row1">HTML5 <i class="fab fa-html5" aria-hidden="true"></i></i></p>
+            <p class="row2">CSS <i class="fab fa-css3" aria-hidden="true"></i></p>
+            <p class="row3">JavaScript <i class="fab fa-js-square"></i></p>
+            <p class="row4">Sass <i class="fab fa-sass"></i></p>
+            <p class="row5">jquery <i class="fas fa-code"></i></p>
+            <p class="row6">Bootstrap <i class="fab fa-bootstrap"></i></p>
+            <p class="row7">React <i class="fab fa-react"></i></p>
+            <p class="row8">Redux <i class="fas fa-sitemap"></i></p>
+            <p class="row9">Git <i class="fab fa-git-alt"></i></p>
+            <p class="row10">Github <i class="fab fa-github"></i></p>
+        </div>
+    </div>
 
 </section>
+<!-- ==============send of kills section========== -->
 
 <!--=================My Projects================-->
 <section class="my_work" id="work">
@@ -111,11 +128,21 @@
 <p class="section_subtitle"></p>
 
 <div class="projects">
+
+
+    <!-- ================jumia website======== -->
+    <div class="project">
+        <div class="project-image-div project-3">
+            <a href="https://jumia-clone1.netlify.app/">
+                <img src="./images//FireShot Capture 032 - Jumia Clone - localhost.png" alt="${alt}">
+            </a> </div>
+    </div>
+    <!-- =====================end of jumia website=================== -->
     
 <div class="project">
     <div class="project-image-div project-1">
-        <a href="./mironga/mironga.html">
-            <img class="project-1" src="./images/writing.png" alt="${alt}">
+        <a href="https://phon-store.netlify.app/">
+            <img class="project-1" src="./images//store.png" alt="${alt}">
         </a> </div>
 </div>
 
@@ -124,35 +151,36 @@
 <!-- ================hospital website======== -->
 <div class="project">
     <div class="project-image-div project-3">
-        <a href="./hospital/html/hospital.html">
-            <img src="./images/hospital.png" alt="${alt}">
+        <a href="https://nasaapii.netlify.app/">
+            <img src="./images/nasa.png" alt="${alt}">
         </a> </div>
 </div>
 <!-- =====================end of hospital website=================== -->
-
-</div>
-</div>
-
-<!-- ==================skills section============ -->
-<section class="skills">
-    <div class="skills-block">
-    <header></header>
-    <div class="skills-container">
-        <p class="row1">HTML5</p>
-        <p class="row2">CSS</p>
-        <p class="row3">JavaScript</p>
-        <p class="row4">Sass</p>
-        <p class="row5">jquery</p>
-        <p class="row6">Bootstrap</p>
-        <p class="row7">React</p>
-        <p class="row8">Redux</p>
-        <p class="row9">Git</p>
-        <p class="row10">Github</p>
-</div>
+<!-- ================amazon website======== -->
+<div class="project">
+    <div class="project-image-div project-3">
+        <a href="https://50fe1.web.app/">
+            <img src="./images/amazon.png" alt="${alt}">
+        </a>
     </div>
+</div>
+<!-- =====================end of amazon website=================== -->
+<!-- ================amazon website======== -->
+<div class="project">
+    <div class="project-image-div project-3">
+        <a href="https://kevinhospital.netlify.app/">
+            <img src="./images/FireShot Capture 028 - Hospital website - kevinhospital.netlify.app.png" alt="${alt}">
+        </a>
+    </div>
+</div>
+<!-- =====================end of amazon website=================== -->
 
-</section>
-<!-- ==============send of kills section========== -->
+
+
+</div>
+</div>
+
+
 
 
 </section>
@@ -169,9 +197,9 @@
     <span class="fab fa-facebook fa-fw fa-2x"></span></a></li>
     <!--<li class="footer_link"><a href=""><i class="fab fa-twitter"></i></a></li>
     -->
-    <li class="footer_link"><a href="https:wa.me/254741154014">
+    <li class="footer_link"><a href="https://api.whatsapp.com/send/?phone=254741154014&text&app_absent=0">
     <i class="fab fa-whatsapp fa-fw fa-2x"></i></a></li>
-    <li class="footer_link"><a href="https:github.com/kevinmisati">
+    <li class="footer_link"><a href="https://github.com/KevinMisati">
     <i class="fab fa-github fa-fw fa-2x"></i></a></li>
 </ul>
 <p class="copyright">Kevin Misati &copy;2020</p>

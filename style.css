@@ -41,10 +41,10 @@
 body,html{
 height: 100%; 
 width: 100%; 
-max-width: 100vw;
+max-width: 1360px;
 font-family: sans-serif;
 overflow-x: hidden;
-
+scroll-behavior: smooth;
 }
 
 *,*::before, *::after{
@@ -144,28 +144,22 @@ h3{font-size: var(--fs-h3);}
 
 }
 .header{
-    width: 100vw;
     height: 70px;
     display: flex;
-    align-items: center;
-    /* background: rgba(248, 250, 249, 0.747); */
+    align-items: center; 
+    padding: auto 3rem;
+   
 }
 
-header{
-    display:flex ;
-    justify-content: space-between;
-    margin-bottom: 2em;
-}
 .logo-container{
-    position: relative;
-}
+    position: absolute;
+    display:flex;
+    align-items: center;
+   }
 .logo{
-    
-    height: 100%;
-    margin-top: auto;
-    padding: 0 0 0 1rem;
     position: absolute;
     z-index: 200;
+    cursor: pointer;
 }
 .logo h3{
     font-size: 2rem;
@@ -174,7 +168,7 @@ header{
 
 nav{
     position: fixed;
-    width: 100vw;
+     width: 100vw; 
     height: 100vh;
     background-color: var(--clr-dark);
     opacity: 0.8;
@@ -190,6 +184,7 @@ nav{
     margin: 0;
     padding: 0;
     transition: clip-path 1s ease-in-out  ;
+     border-bottom: 1px solid var(--clr-accent);
 }
 
 .nav_list{
@@ -304,11 +299,13 @@ button.nav_toggle{
     top:0;
     bottom:auto ;
     height: 70px;
-    padding: 0 3rem;
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    
+      width: 98.3vw; 
+      border-bottom: 1px solid var(--clr-accent);
+        
         
         
     }
@@ -316,21 +313,22 @@ button.nav_toggle{
         list-style: none;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         
         align-items: center;
         align-content: space-between;
         margin-left: auto;
-        width:60vw ;
-        margin-right: 20px;
+          width:50%;
+        
     }
 
     .nav_link{
         color: inherit;
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 300;
         text-decoration: none;
         margin-left: auto;
+
     
     }
     .logo{
@@ -358,10 +356,40 @@ button.nav_toggle{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
+}
+ .intro img {
+     position: relative;
+    animation: hand 1.8s infinite ;
+     transform-origin: 70% 70%;
+} 
+@keyframes hand {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(12deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(9deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 .intro h1{
     font-size: 2.4rem;
     color: var(--clr-light);
+    text-align: center;
 }
 .intro h3.front-end-title{
     font-size: 1.8rem;
@@ -520,10 +548,15 @@ section.my_services{
 } */
 @media (min-width:800px){
     .services{
-        display:block ;
         margin:auto ;
         display: flex;
         max-width: 1000px;
+}
+.services img {
+    max-width: 500px;
+}
+.services p {
+    margin-left: 1rem;
 }
     .service{
         max-width: 500px;
@@ -531,6 +564,7 @@ section.my_services{
     }
     .btn{
         padding: .35rem .5rem;
+        margin-top: 1rem;
     }
     
 }
@@ -623,9 +657,6 @@ section.about_me{
         position: relative;
         flex-wrap: wrap;
     }
-    
-
-    
     .project{
         
         width: 100%;
@@ -634,7 +665,7 @@ section.about_me{
     .project-image-div{
         
         height:300px;
-        width: 400px;
+        width: 300px;
         overflow: hidden;
         position: relative;
         border-radius:5%;
@@ -663,7 +694,7 @@ section.about_me{
     }
 
     .project-image-div{
-        min-width: 350px;
+        width: 300px;
         height:300px;
         overflow: hidden;
         border-radius:5%;
@@ -678,6 +709,13 @@ section.about_me{
     }
 }
 
+@media screen and (max-width:560px){
+     .project-image-div{
+        width: 80vw;
+        height:300px;
+    }
+
+}
 /*==========footer===========*/
 
 /* ================sklls section ============== */
@@ -706,7 +744,13 @@ section.about_me{
     color: #fff;
     font-weight: 600;
     padding: .5em;
-    transition: background-color .5s, color .5s;
+    transition: all .5s, color .5s;
+    cursor: pointer;
+    border: 1px solid var(--clr-accent);
+}
+.skills-container p:hover{
+     background-color: transparent;
+     color: var(--clr-dark);
 }
 .skills .row1{
     grid-area: 1 / 1 / 2 / 3;
@@ -731,6 +775,55 @@ section.about_me{
 }
 .skills .row8{
     grid-area: 3 / 4/ 4 / 7;
+}
+.skills .row9{
+    grid-area: 4 / 1/ 5 / 4;
+}
+.skills .row10{
+    grid-area: 4 / 4/ 5 / 7;
+}
+
+@media screen and (max-width:400px){
+    .skills-container{
+   
+    
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2, 1fr);
+   
+}
+     
+    .skills .row1{
+    grid-area: 1 / 1 / 2 / 4;
+}
+.skills .row2{
+    grid-area: 1 / 4 / 2 / 7;
+}
+.skills .row3{
+    grid-area: 2 / 1 / 3/ 4;
+}
+.skills .row4{
+    grid-area: 2 / 4/ 3 / 7;
+}
+.skills .row5{
+    grid-area: 3 / 1/ 4 / 4;
+}
+.skills .row6{
+    grid-area: 3/ 4 / 4/ 7;
+}
+.skills .row7{
+    grid-area: 4/ 1 / 5 / 4;
+}
+.skills .row8{
+    grid-area: 4 / 4/ 5 / 7;
+}
+.skills .row9{
+    grid-area: 5 / 1/ 6 / 4;
+}
+.skills .row10{
+    grid-area: 5/ 4/ 6 / 7;
+}
+
+
 }
 /* ================end sklls section ============== */
 
